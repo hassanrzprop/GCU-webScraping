@@ -17,7 +17,7 @@ def scrape():
     headlines = soup.find_all("h2")
     data = [headline.get_text() for headline in headlines]
     
-    return jsonify({"headlines": data})
+    return jsonify({"headlines": data}) #return jsonify(data)
 
 if __name__ == '__main__':
     app.run(debug=True)
